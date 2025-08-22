@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="https://fav.farm/😶‍🌫️" />
-    <!-- AS_TargetTag property script -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEP Demo Website</title>
     <script
       src="https://assets.adobedtm.com/6a203c8a0ff8/d1b3fc473b5e/launch-b9fab8c04bea-development.min.js"
       async
     ></script>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo Website</title>
   </head>
   <body>
-    <div class="login-form">
-      <nav>
-        <a href="./index.html">Home</a>
-        <a href="../pages/demoForm.html">Demo Form</a>
-      </nav>
-      <h1>Login</h1>
-      <form>
-        <label for="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Enter your username"
-          required
-        /><br />
+    <div class="form-container">
+      <h1>User Form</h1>
+      <form id="userForm">
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
 
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          required
-        /><br />
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-        <input type="submit" value="Login" />
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" />
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" /> Male</label>
+          <label
+            ><input type="radio" name="gender" value="Female" /> Female</label
+          >
+          <label
+            ><input type="radio" name="gender" value="Other" /> Other</label
+          >
+        </div>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" />
+
+        <!-- Hobbies -->
+        <label>Hobbies:</label>
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="hobbies" value="Reading" />
+            Reading</label
+          >
+          <label
+            ><input type="checkbox" name="hobbies" value="Sports" />
+            Sports</label
+          >
+          <label
+            ><input type="checkbox" name="hobbies" value="Music" /> Music</label
+          >
+          <label
+            ><input type="checkbox" name="hobbies" value="Traveling" />
+            Traveling</label
+          >
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Submit</button>
       </form>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
